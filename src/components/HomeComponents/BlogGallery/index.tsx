@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import TitleSection from "@/components/TitleSection";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,97 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Container from "@/components/Container";
+import Image from "next/image";
+import ImgAll1 from "../../../../public/imagens/img-all-1.jpg";
+import ImgAll2 from "../../../../public/imagens/img-all-2.jpg";
+import ImgAll3 from "../../../../public/imagens/img-all-3.jpg";
+import ImgAll4 from "../../../../public/imagens/img-all-4.png";
+import ImgAll5 from "../../../../public/imagens/img-all-5.jpg";
+import ImgAll6 from "../../../../public/imagens/img-all-6.jpg";
+import ImgAll7 from "../../../../public/imagens/img-all-7.jpg";
+import ImgAll8 from "../../../../public/imagens/img-all-8.jpg";
+import ImgAll9 from "../../../../public/imagens/img-all-9.jpg";
+import ImgAll10 from "../../../../public/imagens/img-all-10.jpg";
+import ImgAll11 from "../../../../public/imagens/img-all-11.jpg";
+import ImgAll12 from "../../../../public/imagens/img-all-12.jpg";
+import ImgAll13 from "../../../../public/imagens/img-all-13.jpg";
+import ImgAll14 from "../../../../public/imagens/img-all-14.jpeg";
+import ImgAll15 from "../../../../public/imagens/img-all-15.jpg";
+import ImgAll16 from "../../../../public/imagens/img-all-16.jpg";
+
+const posts = [
+  {
+    id: 1,
+    image: ImgAll1,
+    title: "História do Casamento",
+    categorySlug: "casamentos",
+  },
+  {
+    id: 2,
+    image: ImgAll2,
+    title: "Casamento cristão",
+    categorySlug: "eventos",
+  },
+  {
+    id: 3,
+    image: ImgAll3,
+    title: "Mini wedding",
+    categorySlug: "debutantes",
+  },
+  {
+    id: 4,
+    image: ImgAll4,
+    title: "O casamento a princesa Beatriz",
+    categorySlug: "fotografia",
+  },
+  {
+    id: 5,
+    image: ImgAll5,
+    title: "Doces, bem casados & bolos",
+    categorySlug: "casamentos",
+  },
+  {
+    id: 6,
+    image: ImgAll6,
+    title: "Cálculo de bebidas",
+    categorySlug: "casamentos",
+  },
+  {
+    id: 7,
+    image: ImgAll7,
+    title: "bouquet de noiva",
+    categorySlug: "casamentos",
+  },
+  {
+    id: 8,
+    image: ImgAll8,
+    title: "escolhendo o vestido",
+    categorySlug: "debutantes",
+  },
+  { id: 9, image: ImgAll9, title: "Penteados", categorySlug: "eventos" },
+  { id: 10, image: ImgAll10, title: "escolha da aliança", categorySlug: "casamentos" },
+  {
+    id: 11,
+    image: ImgAll11,
+    title: "Madrinhas",
+    categorySlug: "eventos",
+  },
+  {
+    id: 12,
+    image: ImgAll12,
+    title: "mesa posta",
+    categorySlug: "fotografia",
+  },
+  { id: 13, image: ImgAll13, title: "extra 1", categorySlug: "debutantes" },
+  {
+    id: 14,
+    image: ImgAll14,
+    title: "extra 2",
+    categorySlug: "casamentos",
+  },
+  { id: 15, image: ImgAll15, title: "extra 3", categorySlug: "eventos" },
+  { id: 15, image: ImgAll16, title: "extra 4", categorySlug: "eventos" },
+];
 
 const categories = [
   {
@@ -47,63 +138,6 @@ const categories = [
     id: 5,
     name: "Debutantes",
     slug: "debutantes",
-  },
-];
-
-const posts = [
-  {
-    id: 1,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Praia Casamento",
-    categorySlug: "casamentos",
-  },
-
-   
-  {
-    id: 2,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Evento Empresarial",
-    categorySlug: "eventos",
-  },
-  {
-    id: 3,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Festa de 15 anos",
-    categorySlug: "debutantes",
-  },
-  {
-    id: 4,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Foto Artística",
-    categorySlug: "fotografia",
-  },
-
-  {
-    id: 5,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Praia Casamento",
-    categorySlug: "casamentos",
-  },
-
-  {
-    id: 6,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Praia Casamento",
-    categorySlug: "debutantes",
-  },
-
-   {
-    id: 7,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Praia Casamento",
-    categorySlug: "eventos",
-  },
-
-  {
-    id: 8,
-    image: "/assets/imagens/praia-casamento.jpg",
-    title: "Praia Casamento",
-    categorySlug: "eventos",
   },
 ];
 
@@ -196,7 +230,7 @@ const BlogGalleryItem = ({
     <Dialog>
       <DialogTrigger asChild>
         <div className="col-span-1 relative overflow-hidden group">
-          <img
+          <Image
             src={image}
             alt={title}
             width={1000}
@@ -209,7 +243,7 @@ const BlogGalleryItem = ({
           </div>
 
           <div className="absolute bottom-3 right-0 w-auto h-6 px-4 bg-neutral-700 flex items-center justify-center shadow-2xl group-hover:translate-x-[102%] transition-all duration-700">
-            <h3 className="text-xs font-medium text-app-primary">{title}</h3>
+            <h3 className="text-xs font-medium text-app-primary uppercase">{title}</h3>
           </div>
         </div>
       </DialogTrigger>

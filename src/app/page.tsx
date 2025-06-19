@@ -37,14 +37,14 @@ export default function Home() {
 
       <BlogGallery />
 
-      {/* <PartnersLogo /> */}
+      <PartnersLogo />
 
       {/* Fotos de decoracao */}
-      {/* <SlidderSection /> */}
+      <SlidderSection />
 
       <PlansSection />
 
-      {/* <div className="min-h-[50vh] w-full bg-white">
+      <div className="min-h-[50vh] w-full bg-white">
         <div className="max-w-7xl mx-auto pb-10">
           <TitleSection title="Fale conosco" />
           <DescriptionSection>
@@ -52,10 +52,10 @@ export default function Home() {
           </DescriptionSection>
         </div>
         <PartnersSection />
-      </div> */}
+      </div>
 
 
-      {/* <Footer />  */}
+      <Footer /> 
     </div>
   );
 }

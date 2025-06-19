@@ -1,3 +1,5 @@
+'use client'
+
 import Subtitle from "@/components/Subtitle"
 import Text from "@/components/Text"
 import useEmblaCarousel from 'embla-carousel-react'
